@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
+import SearchBar from './cmps/SearchBar/SearchBar';
+import { inject, observer } from 'mobx-react';
+
+@inject('store')
+@observer
 class App extends Component {
+  store = this.props.store;
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="app">
+          <h1 className="main-title">Todos App</h1>
+          <SearchBar/>
       </div>
     );
   }
