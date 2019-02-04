@@ -1,19 +1,27 @@
 .app {
-    text-align: center;
-    min-height: 100vh;
+	min-height: 100vh;
 
-    max-width: 1920px;
-    margin: 0 auto;
-    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
+	max-width: 1920px;
+	margin: 0 auto;
+	background: linear-gradient(
+		to bottom,
+		rgba(30, 87, 153, 1) 0%,
+		rgba(125, 185, 232, 0) 100%
+	);
 
-    display: flex;
-    justify-content: center;
-    align-items: space-around;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	& > * {
+		max-width: 768px;
+	}
 }
 
 .main-title {
-    font-size: 5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    opacity: .3;
-    margin: auto;
+	font-size: 3rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	opacity: 0.3;
+    margin-top: 5%;
+    padding: 0 2%;
 }

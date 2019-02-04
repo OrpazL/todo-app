@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -10,7 +10,7 @@ import { Provider } from 'mobx-react';
 import DevTools, { configureDevtool } from 'mobx-react-devtools';
 
 configureDevtool({
-	// Turn on logging changes button programmatically:
+    // Turn on logging changes button programmatically:
 	logEnabled: true
 	// Turn off displaying components updates button programmatically:
 	//   updatesEnabled: false,
@@ -19,8 +19,9 @@ configureDevtool({
 	//   logFilter: change => change.type === 'reaction'
 });
 
+const store = window.store = new Store();
 ReactDOM.render(
-	<Provider store={new Store()}>
+	<Provider store={store}>
 		<React.Fragment>
 			<App />
 			<DevTools />
